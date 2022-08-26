@@ -7,7 +7,7 @@ import type { Option } from './type'
 import { DEFAULT_REQUEST_VAR_NAME } from './constant'
 import { prettyWriteFile } from './prettyWriteFile'
 
-export const genStoreCode = ({ output, generateRequestVarName, baseDir }: Option): Project['hooks'] => ({
+export const mobxValueTsGearPlugin = ({ output, generateRequestVarName, baseDir }: Option): Project['hooks'] => ({
   async beforeWriteTs({ requestFileContent, project }) {
     // console.log(requestFileContent)
     const tsProject = new TSProject({
