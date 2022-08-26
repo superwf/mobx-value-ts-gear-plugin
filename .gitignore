@@ -1,0 +1,6 @@
+node_modules
+*.vim
+*.log
+tmp
+coverage
+lib
