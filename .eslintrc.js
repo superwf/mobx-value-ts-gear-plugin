@@ -51,7 +51,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['jest.config.ts', '__tests__/**/*.ts', 'src/requester/*'],
+        devDependencies: ['jest.config.ts', '**/*.test.ts', 'src/requester/*'],
         optionalDependencies: false,
       },
     ],

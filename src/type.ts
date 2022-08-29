@@ -12,7 +12,13 @@ export type Option = {
 
   /**
    * where the output and service dir is based
-   * @example "src"
+   * @default "src"
    * */
   baseDir?: string
+}
+
+export type CollectRequestResult = {
+  requestFunctionNames: string[]
+  returnTypeNames: string[]
+  defaultValues: string[]
 }
