@@ -45,13 +45,13 @@ test('use beforeWriteTs hook', async () => {
   temp.cleanupSync()
 })
 
-test('generateRequestVarName', async () => {
+test('transformRequestFunctionName', async () => {
   expect(true).toBe(true)
   const tempDir = await temp.mkdir('tempForTest')
   const output = path.join(tempDir, 'output.ts')
   const option: Option = {
     output,
-    generateRequestVarName(reqFuncName) {
+    transformRequestFunctionName(reqFuncName) {
       return `mobx${upperFirst(reqFuncName)}`
     },
   }

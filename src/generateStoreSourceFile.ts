@@ -8,7 +8,7 @@ import { sourceFileToString } from './sourceFileToString'
 import { getShouldImportTypeNames } from './getShouldImportTypeNames'
 
 export const generateStoreSourceFile = ({
-  option: { baseDir, generateRequestVarName },
+  option: { baseDir, transformRequestFunctionName },
   project,
   collectResult: { requestFunctionNames, returnTypeNames, defaultValues },
 }: {
@@ -27,7 +27,7 @@ export const generateStoreSourceFile = ({
     moduleSpecifier: `${baseDir || 'src'}/${project.dest}/${project.name}`,
   })
   requestFunctionNames.forEach((functionName, i) => {
-    const name = (generateRequestVarName || DEFAULT_REQUEST_VAR_NAME)(functionName)
+    const name = (transformRequestFunctionName || DEFAULT_REQUEST_VAR_NAME)(functionName)
 
     storeSource
       .addVariableStatement({

@@ -19,13 +19,13 @@ export const collectRequestName = (requestSourceFile: SourceFile): CollectReques
 
       const reqFun = n.getFirstDescendantByKind(SyntaxKind.FunctionDeclaration)
       const returnPromiseType = reqFun?.getLastChildByKind(SyntaxKind.TypeReference)
-      const returnType = returnPromiseType?.getFirstDescendantByKind(SyntaxKind.TypeReference)
-      const rType = returnType?.getType()
-      // console.log('----------', rType?.getText())
+      const returnTypeRef = returnPromiseType?.getFirstDescendantByKind(SyntaxKind.TypeReference)
+      const returnType = returnTypeRef?.getType()
+      // console.log('----------', returnType?.getText())
 
-      const defaultValue = getDefaultValueByType(rType)
+      const defaultValue = getDefaultValueByType(returnType)
       defaultValues.push(defaultValue)
-      returnTypeNames.push(rType?.getText() || 'any')
+      returnTypeNames.push(returnType?.getText() || 'any')
     }
   })
   return {

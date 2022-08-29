@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`generateRequestVarName 1`] = `
+exports[`transformRequestFunctionName 1`] = `
 "import { request } from \\"mobx-value\\";
 import {
   putPet,

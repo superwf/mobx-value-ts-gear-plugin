@@ -34,4 +34,4 @@ const projects: Project[] = [
 
 ## Option
 
-see Option
+see [Option](https://github.com/superwf/mobx-value-ts-gear-plugin/blob/master/src/type.ts)
