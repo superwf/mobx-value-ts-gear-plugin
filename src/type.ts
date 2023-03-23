@@ -19,6 +19,7 @@ export type Option = {
 
 export type CollectRequestResult = {
   requestFunctionNames: string[]
+  requestFunctionDocs: string[][]
   returnTypeNames: string[]
   defaultValues: string[]
 }

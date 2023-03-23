@@ -10,7 +10,7 @@ import { getShouldImportTypeNames } from './getShouldImportTypeNames'
 export const generateStoreSourceFile = ({
   option: { baseDir, transformRequestFunctionName },
   project,
-  collectResult: { requestFunctionNames, returnTypeNames, defaultValues },
+  collectResult: { requestFunctionNames, requestFunctionDocs, returnTypeNames, defaultValues },
 }: {
   option: Option
   project: Project
@@ -29,6 +29,7 @@ export const generateStoreSourceFile = ({
   requestFunctionNames.forEach((functionName, i) => {
     const name = (transformRequestFunctionName || DEFAULT_REQUEST_VAR_NAME)(functionName)
 
+    // console.log(requestFunctionDocs[i])
     storeSource
       .addVariableStatement({
         declarationKind: VariableDeclarationKind.Const,
@@ -42,7 +43,7 @@ export const generateStoreSourceFile = ({
     })`,
           },
         ],
-        // docs: [`auto generated ${name} by mobx-value-ts-gear-plugin`],
+        docs: requestFunctionDocs[i],
       })
       .appendWhitespace(w => {
         w.newLine()

@@ -1301,22 +1301,12 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@ts-morph/common@~0.10.1":
-  version "0.10.1"
-  resolved "https://registry.npmjs.org/@ts-morph/common/-/common-0.10.1.tgz#be15b9ab13a32bbc1f6a6bd7dc056b2247b272eb"
-  integrity sha512-rKN/VtZUUlW4M+6vjLFSaFc1Z9sK+1hh0832ucPtPkXqOw/mSWE80Lau4z2zTPNTqtxAjfZbvKpQcEwJy0KIEg==
+"@ts-morph/common@~0.18.0":
+  version "0.18.1"
+  resolved "https://registry.npmjs.org/@ts-morph/common/-/common-0.18.1.tgz#ca40c3a62c3f9e17142e0af42633ad63efbae0ec"
+  integrity sha512-RVE+zSRICWRsfrkAw5qCAK+4ZH9kwEFv5h0+/YeHTLieWP7F4wWq4JsKFuNWG+fYh/KF+8rAtgdj5zb2mm+DVA==
   dependencies:
-    fast-glob "^3.2.5"
-    minimatch "^3.0.4"
-    mkdirp "^1.0.4"
-    path-browserify "^1.0.1"
-
-"@ts-morph/common@~0.16.0":
-  version "0.16.0"
-  resolved "https://registry.npmjs.org/@ts-morph/common/-/common-0.16.0.tgz#57e27d4b3fd65a4cd72cb36679ed08acb40fa3ba"
-  integrity sha512-SgJpzkTgZKLKqQniCjLaE3c2L2sdL7UShvmTmPBejAKd2OKV/yfMpQ2IWpAuA+VY5wy7PkSUaEObIqEK6afFuw==
-  dependencies:
-    fast-glob "^3.2.11"
+    fast-glob "^3.2.12"
     minimatch "^5.1.0"
     mkdirp "^1.0.4"
     path-browserify "^1.0.1"
@@ -1952,12 +1942,7 @@ co@^4.6.0:
   resolved "https://registry.npmjs.org/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
   integrity sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==
 
-code-block-writer@^10.1.1:
-  version "10.1.1"
-  resolved "https://registry.npmjs.org/code-block-writer/-/code-block-writer-10.1.1.tgz#ad5684ed4bfb2b0783c8b131281ae84ee640a42f"
-  integrity sha512-67ueh2IRGst/51p0n6FvPrnRjAGHY5F8xdjkgrYE7DDzpJe6qA07RYQ9VcoUeo5ATOjSOiWpSL3SWBRRbempMw==
-
-code-block-writer@^11.0.0:
+code-block-writer@^11.0.3:
   version "11.0.3"
   resolved "https://registry.npmjs.org/code-block-writer/-/code-block-writer-11.0.3.tgz#9eec2993edfb79bfae845fbc093758c0a0b73b76"
   integrity sha512-NiujjUFB4SwScJq2bwbYUtXbZhBSlY6vYzm++3Q6oC+U+injTqfPYFK8wS9COOmb2lueqp0ZRB4nK1VYeHgNyw==
@@ -2714,7 +2699,18 @@ fast-diff@^1.1.2:
   resolved "https://registry.npmjs.org/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
   integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
 
-fast-glob@^3.2.11, fast-glob@^3.2.5, fast-glob@^3.2.9:
+fast-glob@^3.2.12:
+  version "3.2.12"
+  resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.12.tgz#7f39ec99c2e6ab030337142da9e0c18f37afae80"
+  integrity sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==
+  dependencies:
+    "@nodelib/fs.stat" "^2.0.2"
+    "@nodelib/fs.walk" "^1.2.3"
+    glob-parent "^5.1.2"
+    merge2 "^1.3.0"
+    micromatch "^4.0.4"
+
+fast-glob@^3.2.9:
   version "3.2.11"
   resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.11.tgz#a1172ad95ceb8a16e20caa5c5e56480e5129c1d9"
   integrity sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==
@@ -5037,10 +5033,10 @@ trim-newlines@^3.0.0:
   resolved "https://registry.npmjs.org/trim-newlines/-/trim-newlines-3.0.1.tgz#260a5d962d8b752425b32f3a7db0dcacd176c144"
   integrity sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==
 
-ts-gear@^4.11.0:
-  version "4.11.0"
-  resolved "https://registry.npmjs.org/ts-gear/-/ts-gear-4.11.0.tgz#62e33596481a625db7c6a3eb8d6398a16a88248b"
-  integrity sha512-k9JvyBehKfgaiNJn1u+SKyQaK+7G/QwkZsxNf+yNCo10yIX/l+SmsMsL8GcWZlf1ntvC+dqGz1ptNLumZgXNNw==
+ts-gear@^4.11.5:
+  version "4.11.5"
+  resolved "https://registry.npmjs.org/ts-gear/-/ts-gear-4.11.5.tgz#394f73870566d56538f65ad24e711187d30f2d6c"
+  integrity sha512-SN2XRl6n7RaK7cjExy692nKMcqjyLvoV3q9NxS7j5UdwOyt2+p0VTvCb8HTIgLYl9TvSk2X6Au1/BKsJ73nHMw==
   dependencies:
     "@vitalets/google-translate-api" "^8.0.0"
     app-root-path "^3.0.0"
@@ -5059,26 +5055,18 @@ ts-gear@^4.11.0:
     rimraf "^3.0.2"
     swagger-schema-official "^2.0.0-bab6bed"
     traverse "^0.6.6"
-    ts-morph "^11.0.0"
+    ts-morph "^17.0.1"
     ts-node "^8.8.2"
     tsconfig-paths "^3.9.0"
     url-join "^4.0.1"
 
-ts-morph@^11.0.0:
-  version "11.0.3"
-  resolved "https://registry.npmjs.org/ts-morph/-/ts-morph-11.0.3.tgz#01a92b3c2b5a48ccdf318ec90864229b8061d056"
-  integrity sha512-ymuPkndv9rzqTLiHWMkVrFXWcN4nBiBGhRP/kTC9F5amAAl7BNLfyrsTzMD1o9A0zishKoF1KQT/0yyFhJnPgA==
+ts-morph@^17.0.1:
+  version "17.0.1"
+  resolved "https://registry.npmjs.org/ts-morph/-/ts-morph-17.0.1.tgz#d85df4fcf9a1fcda1b331d52c00655f381c932d1"
+  integrity sha512-10PkHyXmrtsTvZSL+cqtJLTgFXkU43Gd0JCc0Rw6GchWbqKe0Rwgt1v3ouobTZwQzF1mGhDeAlWYBMGRV7y+3g==
   dependencies:
-    "@ts-morph/common" "~0.10.1"
-    code-block-writer "^10.1.1"
-
-ts-morph@^15.1.0:
-  version "15.1.0"
-  resolved "https://registry.npmjs.org/ts-morph/-/ts-morph-15.1.0.tgz#53deea5296d967ff6eba8f15f99d378aa7074a4e"
-  integrity sha512-RBsGE2sDzUXFTnv8Ba22QfeuKbgvAGJFuTN7HfmIRUkgT/NaVLfDM/8OFm2NlFkGlWEXdpW5OaFIp1jvqdDuOg==
-  dependencies:
-    "@ts-morph/common" "~0.16.0"
-    code-block-writer "^11.0.0"
+    "@ts-morph/common" "~0.18.0"
+    code-block-writer "^11.0.3"
 
 ts-node@^10.9.1:
   version "10.9.1"
@@ -5181,10 +5169,10 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-typescript@^4.7.4:
-  version "4.8.2"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-4.8.2.tgz#e3b33d5ccfb5914e4eeab6699cf208adee3fd790"
-  integrity sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==
+typescript@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-5.0.2.tgz#891e1a90c5189d8506af64b9ef929fca99ba1ee5"
+  integrity sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==
 
 uglify-js@^3.1.4:
   version "3.17.0"

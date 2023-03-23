@@ -5,20 +5,28 @@ import type { CollectRequestResult } from './type'
 
 export const collectRequestName = (requestSourceFile: SourceFile): CollectRequestResult => {
   const requestFunctionNames: string[] = []
+  const requestFunctionDocs: string[][] = []
   const returnTypeNames: string[] = []
   const defaultValues: string[] = []
 
   requestSourceFile.forEachChild(n => {
     if (n.getKind() === SyntaxKind.VariableStatement) {
       const syntaxList = n.getLastChildByKind(SyntaxKind.VariableDeclarationList)
+      const jsDocs = n.getFirstDescendantByKind(SyntaxKind.JSDoc)
+      if (jsDocs) {
+        jsDocs.getInnerText()
+        requestFunctionDocs.push([jsDocs.getInnerText()])
+      } else {
+        requestFunctionDocs.push([])
+      }
       if (syntaxList) {
         const identifier = syntaxList.getDeclarations()[0]
         const name = identifier.getName()
         requestFunctionNames.push(name)
       }
 
-      const reqFun = n.getFirstDescendantByKind(SyntaxKind.FunctionDeclaration)
-      const returnPromiseType = reqFun?.getLastChildByKind(SyntaxKind.TypeReference)
+      const reqFunc = n.getFirstDescendantByKind(SyntaxKind.FunctionDeclaration)
+      const returnPromiseType = reqFunc?.getLastChildByKind(SyntaxKind.TypeReference)
       const returnTypeRef = returnPromiseType?.getFirstDescendantByKind(SyntaxKind.TypeReference)
       const returnType = returnTypeRef?.getType()
       // console.log('----------', returnType?.getText())
@@ -30,6 +38,7 @@ export const collectRequestName = (requestSourceFile: SourceFile): CollectReques
   })
   return {
     requestFunctionNames,
+    requestFunctionDocs,
     returnTypeNames,
     defaultValues,
   }

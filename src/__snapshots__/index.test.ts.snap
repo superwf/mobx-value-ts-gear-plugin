@@ -28,78 +28,186 @@ import {
   User,
 } from \\"src/service/petv3\\";
 
+/**
+ * @description
+ *   Update an existing pet by Id
+ *   Update an existing pet
+ * @tags pet
+ */
 export const mobxPutPet = request({
   request: putPet,
   value: {} as Pet,
 });
+/**
+ * @description
+ *   Add a new pet to the store
+ *   Add a new pet to the store
+ * @tags pet
+ */
 export const mobxPostPet = request({
   request: postPet,
   value: {} as Pet,
 });
+/**
+ * @description
+ *   Multiple status values can be provided with comma separated strings
+ *   Finds Pets by status
+ * @tags pet
+ */
 export const mobxGetPetFindByStatus = request({
   request: getPetFindByStatus,
   value: {} as Pet[],
 });
+/**
+ * @description
+ *   Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+ *   Finds Pets by tags
+ * @tags pet
+ */
 export const mobxGetPetFindByTags = request({
   request: getPetFindByTags,
   value: {} as Pet[],
 });
+/**
+ * @description
+ *   Returns a single pet
+ *   Find pet by ID
+ * @tags pet
+ */
 export const mobxGetPetPetId = request({
   request: getPetPetId,
   value: {} as Pet,
 });
+/**
+ * @description
+ *   Updates a pet in the store with form data
+ * @tags pet
+ */
 export const mobxPostPetPetId = request({
   request: postPetPetId,
   value: {} as any,
 });
+/**
+ * @description
+ *   Deletes a pet
+ * @tags pet
+ */
 export const mobxDeletePetPetId = request({
   request: deletePetPetId,
   value: {} as any,
 });
+/**
+ * @description
+ *   uploads an image
+ * @tags pet
+ */
 export const mobxPostPetPetIdUploadImage = request({
   request: postPetPetIdUploadImage,
   value: {} as ApiResponse,
 });
+/**
+ * @description
+ *   Returns a map of status codes to quantities
+ *   Returns pet inventories by status
+ * @tags store
+ */
 export const mobxGetStoreInventory = request({
   request: getStoreInventory,
   value: {} as { [propertyName: string]: number },
 });
+/**
+ * @description
+ *   Place a new order in the store
+ *   Place an order for a pet
+ * @tags store
+ */
 export const mobxPostStoreOrder = request({
   request: postStoreOrder,
   value: {} as Order,
 });
+/**
+ * @description
+ *   For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
+ *   Find purchase order by ID
+ * @tags store
+ */
 export const mobxGetStoreOrderOrderId = request({
   request: getStoreOrderOrderId,
   value: {} as Order,
 });
+/**
+ * @description
+ *   For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors
+ *   Delete purchase order by ID
+ * @tags store
+ */
 export const mobxDeleteStoreOrderOrderId = request({
   request: deleteStoreOrderOrderId,
   value: {} as any,
 });
+/**
+ * @description
+ *   This can only be done by the logged in user.
+ *   Create user
+ * @tags user
+ */
 export const mobxPostUser = request({
   request: postUser,
   value: {} as User,
 });
+/**
+ * @description
+ *   Creates list of users with given input array
+ *   Creates list of users with given input array
+ * @tags user
+ */
 export const mobxPostUserCreateWithList = request({
   request: postUserCreateWithList,
   value: {} as User,
 });
+/**
+ * @description
+ *   Logs user into the system
+ * @tags user
+ */
 export const mobxGetUserLogin = request({
   request: getUserLogin,
   value: \\"\\" as string,
 });
+/**
+ * @description
+ *   Logs out current logged in user session
+ * @tags user
+ */
 export const mobxGetUserLogout = request({
   request: getUserLogout,
   value: {} as any,
 });
+/**
+ * @description
+ *   Get user by user name
+ * @tags user
+ */
 export const mobxGetUserUsername = request({
   request: getUserUsername,
   value: {} as User,
 });
+/**
+ * @description
+ *   This can only be done by the logged in user.
+ *   Update user
+ * @tags user
+ */
 export const mobxPutUserUsername = request({
   request: putUserUsername,
   value: {} as any,
 });
+/**
+ * @description
+ *   This can only be done by the logged in user.
+ *   Delete user
+ * @tags user
+ */
 export const mobxDeleteUserUsername = request({
   request: deleteUserUsername,
   value: {} as any,
@@ -135,78 +243,186 @@ import {
   User,
 } from \\"src/service/petv3\\";
 
+/**
+ * @description
+ *   Update an existing pet by Id
+ *   Update an existing pet
+ * @tags pet
+ */
 export const requestPutPet = request({
   request: putPet,
   value: {} as Pet,
 });
+/**
+ * @description
+ *   Add a new pet to the store
+ *   Add a new pet to the store
+ * @tags pet
+ */
 export const requestPostPet = request({
   request: postPet,
   value: {} as Pet,
 });
+/**
+ * @description
+ *   Multiple status values can be provided with comma separated strings
+ *   Finds Pets by status
+ * @tags pet
+ */
 export const requestGetPetFindByStatus = request({
   request: getPetFindByStatus,
   value: {} as Pet[],
 });
+/**
+ * @description
+ *   Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+ *   Finds Pets by tags
+ * @tags pet
+ */
 export const requestGetPetFindByTags = request({
   request: getPetFindByTags,
   value: {} as Pet[],
 });
+/**
+ * @description
+ *   Returns a single pet
+ *   Find pet by ID
+ * @tags pet
+ */
 export const requestGetPetPetId = request({
   request: getPetPetId,
   value: {} as Pet,
 });
+/**
+ * @description
+ *   Updates a pet in the store with form data
+ * @tags pet
+ */
 export const requestPostPetPetId = request({
   request: postPetPetId,
   value: {} as any,
 });
+/**
+ * @description
+ *   Deletes a pet
+ * @tags pet
+ */
 export const requestDeletePetPetId = request({
   request: deletePetPetId,
   value: {} as any,
 });
+/**
+ * @description
+ *   uploads an image
+ * @tags pet
+ */
 export const requestPostPetPetIdUploadImage = request({
   request: postPetPetIdUploadImage,
   value: {} as ApiResponse,
 });
+/**
+ * @description
+ *   Returns a map of status codes to quantities
+ *   Returns pet inventories by status
+ * @tags store
+ */
 export const requestGetStoreInventory = request({
   request: getStoreInventory,
   value: {} as { [propertyName: string]: number },
 });
+/**
+ * @description
+ *   Place a new order in the store
+ *   Place an order for a pet
+ * @tags store
+ */
 export const requestPostStoreOrder = request({
   request: postStoreOrder,
   value: {} as Order,
 });
+/**
+ * @description
+ *   For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
+ *   Find purchase order by ID
+ * @tags store
+ */
 export const requestGetStoreOrderOrderId = request({
   request: getStoreOrderOrderId,
   value: {} as Order,
 });
+/**
+ * @description
+ *   For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors
+ *   Delete purchase order by ID
+ * @tags store
+ */
 export const requestDeleteStoreOrderOrderId = request({
   request: deleteStoreOrderOrderId,
   value: {} as any,
 });
+/**
+ * @description
+ *   This can only be done by the logged in user.
+ *   Create user
+ * @tags user
+ */
 export const requestPostUser = request({
   request: postUser,
   value: {} as User,
 });
+/**
+ * @description
+ *   Creates list of users with given input array
+ *   Creates list of users with given input array
+ * @tags user
+ */
 export const requestPostUserCreateWithList = request({
   request: postUserCreateWithList,
   value: {} as User,
 });
+/**
+ * @description
+ *   Logs user into the system
+ * @tags user
+ */
 export const requestGetUserLogin = request({
   request: getUserLogin,
   value: \\"\\" as string,
 });
+/**
+ * @description
+ *   Logs out current logged in user session
+ * @tags user
+ */
 export const requestGetUserLogout = request({
   request: getUserLogout,
   value: {} as any,
 });
+/**
+ * @description
+ *   Get user by user name
+ * @tags user
+ */
 export const requestGetUserUsername = request({
   request: getUserUsername,
   value: {} as User,
 });
+/**
+ * @description
+ *   This can only be done by the logged in user.
+ *   Update user
+ * @tags user
+ */
 export const requestPutUserUsername = request({
   request: putUserUsername,
   value: {} as any,
 });
+/**
+ * @description
+ *   This can only be done by the logged in user.
+ *   Delete user
+ * @tags user
+ */
 export const requestDeleteUserUsername = request({
   request: deleteUserUsername,
   value: {} as any,
